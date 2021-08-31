@@ -1,5 +1,5 @@
 <template>
-	<div class="header__area bg-color text-white px-4">
+	<div class="header__area bg-color text-white px-5">
 		<div class="container-fluid d-flex  align-items-center justify-content-between">
 			<div class="header__du_left">
 				<a href="#">
@@ -33,7 +33,7 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .bg-color {
-	background-color: #8c1819;
+	background-color: #800000;
 	border-top: 1px solid #ff1919;
 	border-bottom: 1px solid #ff1919;
 }

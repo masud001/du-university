@@ -4,7 +4,7 @@
 			<div class="container-fluid">
 				<div class="d-flex justify-content-between w-100">
 					<div class="d-flex">
-						<div class="navbar__search_button me-3">
+						<div class="navbar__home_button me-3">
 							<i class="fas fa-home  text-white"></i>
 						</div>
 						<div class="navbar__search_button position-relative">
@@ -64,7 +64,11 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .bg-color {
-	background-color: #bbbac0;
+	background-color: #333333;
+}
+.navbar__search_button i:hover {
+	color: red !important;
+	transition: all 0.4s;
 }
 .navbar__search_button {
 	i {
@@ -77,6 +81,17 @@ export default defineComponent({
 		top: 3px;
 	}
 }
+.navbar__home_button i:hover {
+	color: red !important;
+	transition: all 0.4s;
+}
+.navbar__home_button {
+	i {
+		cursor: pointer;
+		font-size: 20;
+	}
+}
+
 input.navbar__search_input:focus {
 	border: 0;
 	outline: 0;
@@ -90,9 +105,14 @@ input.navbar__search_input {
 	transform: translate(-10%, -50%);
 	top: 50%;
 }
+.navbar__menu_toggle_button i:hover {
+	color: red !important;
+	transition: all 0.4s;
+}
 .navbar__menu_toggle_button {
 	i {
 		cursor: pointer;
+		font-size: 20px;
 	}
 }
 

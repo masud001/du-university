@@ -15,7 +15,7 @@
 					möhtəşəm CinemaPlus.
 				</p>
 				<div class="link">
-					<a href="az/entertainment/index.html">DAHA ƏTRAFLI</a>
+					<a href="#">DAHA ƏTRAFLI</a>
 				</div>
 
 				<div class="tabs">
@@ -24,8 +24,9 @@
 						:key="name"
 						v-on:click="current = i"
 						:class="{ active: i == current }"
+						class="text-capitalize"
 					>
-						for {{ name }}
+						<strong>for {{ name }}</strong>
 					</a>
 				</div>
 			</div>
@@ -106,7 +107,7 @@ export default defineComponent({
 	name: 'StudentTeacher',
 	data() {
 		return {
-			bgImage1: '../assets/childs_image.png',
+			bgImage1: '../assets/du-students.jpg',
 			bgImage2: '../assets/childs_image.png',
 			current: 0,
 			buttons: ['student', 'teacher'],
@@ -150,10 +151,10 @@ export default defineComponent({
 	top: 0;
 }
 .index_gray em.bg span.student {
-	background-image: url('../assets/childs_image.png');
+	background-image: url('../assets/du-students.jpg');
 }
 .index_gray em.bg span.teacher {
-	background-image: url('../assets/for-adults-cover.png');
+	background-image: url('../assets/du-students.jpg');
 }
 .index_gray > div {
 	width: 100%;

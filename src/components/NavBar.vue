@@ -1,6 +1,6 @@
 <template>
 	<div class="navbar__top">
-		<nav class="navbar navbar-light bg-color px-4">
+		<nav class="navbar navbar-light bg-color px-5">
 			<div class="container-fluid">
 				<a class="navbar-brand text-white text-uppercase" href="#">university of dhaka</a>
 				<div class="d-flex">
@@ -70,6 +70,17 @@ export default defineComponent({
 
 .navbar__menu_toggle_button {
 	cursor: pointer;
+	i {
+		font-size: 20px;
+	}
+}
+.navbar__menu_toggle_button i:hover {
+	color: red !important;
+	transition: all 0.4s;
+}
+.navbar__search_button i:hover {
+	color: red !important;
+	transition: all 0.4s;
 }
 .navbar__search_button {
 	margin-right: 25px;

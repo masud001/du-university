@@ -6,7 +6,7 @@
 					<div>
 						<div class="next_index">
 							<div class="image">
-								<img src="https://picsum.photos/id/1081/500/450" alt="" />
+								<img src="../assets/du-facultys.jpg" alt="" />
 							</div>
 							<div class="inner">
 								<h3>
@@ -179,7 +179,8 @@ export default defineComponent({
 }
 .next_index .image {
 	width: 450px;
-	padding: 95px 0 0;
+	height: 450px;
+	/* padding: 95px 0 0; */
 }
 .next_index .image img {
 	border-radius: 20px;

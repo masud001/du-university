@@ -39,6 +39,10 @@ export default defineComponent({
 	-o-transition: all 0.15s linear;
 	transition: all 0.15s linear;
 	text-decoration: none;
+	cursor: pointer;
+}
+.card__area:hover {
+	transform: translate(0, -5px);
 }
 .card__area h5 {
 	font-size: 14px;

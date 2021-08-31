@@ -5,9 +5,11 @@
 				<div class="col-12 col-md-3 col-sm-6">
 					<ul class="navbar__menu">
 						<li><a href="#">Home </a></li>
-						<li><a href="#">About us </a></li>
-						<li><a href="#">our company </a></li>
-						<li v-on:click.stop.prevent="toggle()">
+						<li><a href="#">About</a></li>
+						<li><a href="#">Academic </a></li>
+						<li><a href="#">Research and Publication </a></li>
+
+						<!-- <li v-on:click.stop.prevent="toggle()">
 							<a href="#"
 								>our product <span><i class="fas fa-angle-down"></i></span>
 							</a>
@@ -22,40 +24,34 @@
 						</li>
 						<li><a href="#">services </a></li>
 						<li><a href="#">news </a></li>
-						<li><a href="#">international </a></li>
+						<li><a href="#">international </a></li> -->
 					</ul>
 				</div>
 				<div class="col-12 col-md-3 col-sm-6">
 					<ul class="navbar__menu">
-						<li><a href="#">Home </a></li>
-						<li><a href="#">About us </a></li>
-						<li><a href="#">our company </a></li>
-						<li><a href="#">our product </a></li>
-						<li><a href="#">services </a></li>
-						<li><a href="#">news </a></li>
-						<li><a href="#">international </a></li>
+						<li><a href="#">Activities/Miscellaneous</a></li>
+						<li><a href="#">Scholarship/Financial Aids</a></li>
+						<li><a href="#">Resources </a></li>
+						<li><a href="#">Gallery/Archive </a></li>
 					</ul>
 				</div>
 				<div class="col-12 col-md-3 col-sm-6">
 					<ul class="navbar__menu">
-						<li><a href="#">Home </a></li>
-						<li><a href="#">About us </a></li>
-						<li><a href="#">our company </a></li>
-						<li><a href="#">our product </a></li>
-						<li><a href="#">services </a></li>
-						<li><a href="#">news </a></li>
-						<li><a href="#">international </a></li>
+						<li>
+							<a href="#">
+								Achievement
+							</a>
+						</li>
+						<li><a href="#">Alumni</a></li>
+						<li><a href="#">Links </a></li>
+						<li><a href="#">Forms </a></li>
 					</ul>
 				</div>
 				<div class="col-12 col-md-3 col-sm-6">
 					<ul class="navbar__menu">
-						<li><a href="#">Home </a></li>
-						<li><a href="#">About us </a></li>
-						<li><a href="#">our company </a></li>
-						<li><a href="#">our product </a></li>
-						<li><a href="#">services </a></li>
-						<li><a href="#">news </a></li>
-						<li><a href="#">international </a></li>
+						<li><a href="#">Academic Management </a></li>
+						<li><a href="#">Events </a></li>
+						<li><a href="#">Notice </a></li>
 					</ul>
 				</div>
 			</div>
