@@ -1,32 +1,39 @@
 <template>
 	<div>
-		<nav class="navbar navbar-light bg-color px-4 py-3 fixed-bottom">
-			<div class="container-fluid">
-				<div class="d-flex justify-content-between w-100">
-					<div class="d-flex">
-						<div class="navbar__home_button me-3">
-							<i class="fas fa-home  text-white"></i>
+		<transition name="footer-nav">
+			<nav
+				@scroll="handleSCroll"
+				id="footerNav"
+				:class="{ sticky: active }"
+				class="navbar navbar-light bg-color px-4 py-3 d-none"
+			>
+				<div class="container-fluid">
+					<div class="d-flex justify-content-between w-100">
+						<div class="d-flex">
+							<div class="navbar__home_button me-3">
+								<i class="fas fa-home  text-white"></i>
+							</div>
+							<div class="navbar__search_button position-relative">
+								<i
+									v-on:click="searchToggle()"
+									:class="{ active: isShow }"
+									class="fas fa-search  text-white"
+								></i>
+								<input
+									v-if="isShow"
+									class="navbar__search_input"
+									type="text"
+									placeholder="Search..."
+								/>
+							</div>
 						</div>
-						<div class="navbar__search_button position-relative">
-							<i
-								v-on:click="searchToggle()"
-								:class="{ active: isShow }"
-								class="fas fa-search  text-white"
-							></i>
-							<input
-								v-if="isShow"
-								class="navbar__search_input"
-								type="text"
-								placeholder="Search..."
-							/>
+						<div v-on:click="toggle()" class="navbar__menu_toggle_button">
+							<i class="fas fa-list-ul text-white"></i>
 						</div>
-					</div>
-					<div v-on:click="toggle()" class="navbar__menu_toggle_button">
-						<i class="fas fa-list-ul text-white"></i>
 					</div>
 				</div>
-			</div>
-		</nav>
+			</nav>
+		</transition>
 
 		<transition name="Footer__dropdown__menu">
 			<div key="1" class="" v-if="menuOff">
@@ -47,8 +54,10 @@ export default defineComponent({
 		return {
 			menuOff: false,
 			isShow: false,
+			isActive: false,
 		};
 	},
+
 	methods: {
 		toggle() {
 			console.log('is clicked', this.menuOff);
@@ -57,7 +66,25 @@ export default defineComponent({
 		searchToggle() {
 			return (this.isShow = !this.isShow);
 		},
+		handleScroll() {
+			console.log('scrolls window');
+			let footerNav = document.querySelector('#footerNav');
+			if (window.scrollY > 200) {
+				footerNav?.classList.add('fixed-bottom');
+				footerNav?.classList.remove('d-none');
+			} else if (window.scrollY < 200) {
+				footerNav?.classList.remove('fixed-bottom');
+				footerNav?.classList.add('d-none');
+			}
+		},
 	},
+	created() {
+		window.addEventListener('scroll', this.handleScroll);
+	},
+	destroyed() {
+		window.removeEventListener('scroll', this.handleScroll);
+	},
+	mounted() {},
 	setup() {},
 });
 </script>
@@ -134,6 +161,25 @@ input.navbar__search_input {
 	opacity: 0;
 }
 .Footer__dropdown__menu-leave-active {
+	transition: all 0.5s ease-in;
+}
+
+.footer-nav-enter-from {
+	opacity: 0;
+}
+.footer-nav-enter-to {
+	opacity: 1;
+}
+.footer-nav-enter-active {
+	transition: all 0.5s ease-in;
+}
+.footer-nav-leave-from {
+	opacity: 1;
+}
+.footer-nav-leave-to {
+	opacity: 0;
+}
+.footer-nav-leave-active {
 	transition: all 0.5s ease-in;
 }
 </style>
