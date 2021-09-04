@@ -116,13 +116,24 @@ input.navbar__search_input {
 	}
 }
 
-.Footer__dropdown__menu-enter-active,
-.Footer__dropdown__menu-leave-active {
-	transition: all 1s;
+// Dropdown Menu Animation
+
+.Footer__dropdown__menu-enter-from {
+	opacity: 0;
 }
-.Footer__dropdown__menu-enter,
+.Footer__dropdown__menu-enter-to {
+	opacity: 1;
+}
+.Footer__dropdown__menu-enter-active {
+	transition: all 0.5s ease-in;
+}
+.Footer__dropdown__menu-leave-from {
+	opacity: 1;
+}
 .Footer__dropdown__menu-leave-to {
 	opacity: 0;
-	transform: translateY(-30px);
+}
+.Footer__dropdown__menu-leave-active {
+	transition: all 0.5s ease-in;
 }
 </style>

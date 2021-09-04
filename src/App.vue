@@ -14,7 +14,7 @@
 body {
 	color: #000 !important;
 	font-size: 14px !important;
-	font-family: 'Goudy' !important;
+	font-family: Arial, Helvetica, sans-serif;
 	background-color: #eae9ee !important;
 	background-size: cover;
 	min-height: 100%;

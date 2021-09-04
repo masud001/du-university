@@ -98,7 +98,7 @@ export default defineComponent({
 	background-color: rgba(0, 0, 0, 0.75);
 	padding: 30px 0px;
 	z-index: 99;
-	top: 47px;
+	top: 32px;
 }
 .navbar__menu {
 	li {
@@ -124,6 +124,12 @@ export default defineComponent({
 				margin-left: 15px;
 			}
 		}
+	}
+}
+
+@media screen and (max-width: 1350px) {
+	.dropdown__menu_section {
+		top: 47px;
 	}
 }
 </style>

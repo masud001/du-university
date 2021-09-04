@@ -2,6 +2,11 @@
 	<div class="home">
 		<NavBar />
 		<Header />
+
+		<!-- navbar-2 menu start -->
+		<navbar-menu />
+		<!-- navbar-2 menu end -->
+
 		<div class="card__section">
 			<div class="container">
 				<div class="row">
@@ -58,6 +63,7 @@ import FooterNavigation from '@/components/FooterNavigation.vue';
 import Header from '@/components/Header.vue';
 import IndexSection from '@/components/IndexSection.vue';
 import NavBar from '@/components/NavBar.vue';
+import NavbarMenu from '@/components/NavbarMenu.vue';
 import NewsIndex from '@/components/NewsIndex.vue';
 import StudentTeacher from '@/components/StudentTeacher.vue';
 import VideoCards from '@/components/VideoCards.vue';
@@ -75,6 +81,7 @@ export default defineComponent({
 		NewsIndex,
 		Footer,
 		FooterNavigation,
+		NavbarMenu,
 	},
 });
 </script>

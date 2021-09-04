@@ -15,6 +15,7 @@
 						></i>
 					</div>
 
+					<!-- currently commented for requirement  -->
 					<div v-on:click="toggle()" class="navbar__menu_toggle_button">
 						<i class="fas fa-list-ul text-white"></i>
 					</div>
@@ -70,6 +71,7 @@ export default defineComponent({
 
 .navbar__menu_toggle_button {
 	cursor: pointer;
+	display: none;
 	i {
 		font-size: 20px;
 	}
@@ -83,7 +85,7 @@ export default defineComponent({
 	transition: all 0.4s;
 }
 .navbar__search_button {
-	margin-right: 25px;
+	margin-right: 0px;
 	i {
 		position: relative;
 		z-index: 12;
@@ -115,13 +117,31 @@ export default defineComponent({
 
 // Dropdown Menu Animation
 
-.dropdown__menu-enter-active,
-.dropdown__menu-leave-active {
-	transition: all 1s;
+.dropdown__menu-enter-from {
+	opacity: 0;
 }
-.dropdown__menu-enter,
+.dropdown__menu-enter-to {
+	opacity: 1;
+}
+.dropdown__menu-enter-active {
+	transition: all 0.5s ease-in;
+}
+.dropdown__menu-leave-from {
+	opacity: 1;
+}
 .dropdown__menu-leave-to {
 	opacity: 0;
-	transform: translateY(30px);
+}
+.dropdown__menu-leave-active {
+	transition: all 0.5s ease-in;
+}
+
+@media screen and (max-width: 1350px) {
+	.navbar__search_button {
+		margin-right: 25px;
+	}
+	.navbar__menu_toggle_button {
+		display: block;
+	}
 }
 </style>
