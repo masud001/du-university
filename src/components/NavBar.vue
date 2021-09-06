@@ -4,6 +4,54 @@
 			<div class="container-fluid">
 				<a class="navbar-brand text-white text-uppercase" href="#">university of dhaka</a>
 				<div class="d-flex">
+					<ul class="navbar__top_menu">
+						<li
+							@mouseover="listOne = true"
+							@mouseleave="listOne = false"
+							class="position-relative "
+						>
+							<a href="#">links</a>
+							<transition name="dropdown__menu">
+								<div
+									class="position-absolute navbar__top_menu_dropdown p-3"
+									v-if="listOne"
+									@click="listOne = false"
+								>
+									<ul v-show="showByIndex === i">
+										<li><a href="#">Home </a></li>
+										<li><a href="#">About</a></li>
+										<li><a href="#">Academic </a></li>
+										<li><a href="#">Research and Publication </a></li>
+									</ul>
+								</div>
+							</transition>
+						</li>
+						<li
+							@mouseover="listTwo = true"
+							@mouseleave="listTwo = false"
+							class="position-relative "
+						>
+							<a href="#">notice</a>
+
+							<transition name="dropdown__menu">
+								<div
+									class="position-absolute navbar__top_menu_dropdown p-3"
+									v-if="listTwo"
+									@click="listTwo = false"
+								>
+									<ul v-show="showByIndex === i">
+										<li><a href="#">Home </a></li>
+										<li><a href="#">About</a></li>
+										<li><a href="#">Academic </a></li>
+										<li><a href="#">Research and Publication </a></li>
+									</ul>
+								</div>
+							</transition>
+						</li>
+						<li><a href="#">academy</a></li>
+						<li><a href="#">about</a></li>
+						<li><a href="#">team</a></li>
+					</ul>
 					<div class="navbar__search_input">
 						<input v-if="isShow" type="text" placeholder="Search..." />
 					</div>
@@ -41,6 +89,10 @@ export default defineComponent({
 		return {
 			onOff: false,
 			isShow: false,
+			listOne: false,
+			listTwo: false,
+			listThree: false,
+			listFour: false,
 		};
 	},
 
@@ -59,6 +111,83 @@ export default defineComponent({
 <style scoped lang="scss">
 .navbar__top {
 	position: relative;
+}
+.navbar__top_menu {
+	margin: 0 25px 0 0;
+	padding: 0;
+	list-style: none;
+	li {
+		display: inline;
+
+		a {
+			display: inline-block;
+			padding: 2px 10px;
+			color: #fff;
+			text-transform: capitalize;
+			font-size: 12px;
+			text-decoration: none;
+			font-family: Arial, Helvetica, sans-serif;
+			&:hover {
+				color: red;
+			}
+		}
+	}
+}
+.navbar__top_menu_dropdown {
+	z-index: 99;
+	width: 300px;
+	background: -moz-linear-gradient(top, #000 0, #333 50%, #474747 100%);
+	background: -webkit-gradient(
+		linear,
+		left top,
+		left bottom,
+		color-stop(0, #000),
+		color-stop(75%, #333),
+		color-stop(100%, #474747)
+	);
+	background: -webkit-linear-gradient(top, #000 0, #333 75%, #474747 100%);
+	background: -o-linear-gradient(top, #000 0, #333 75%, #474747 100%);
+	background: -ms-linear-gradient(top, #000 0, #333 75%, #474747 100%);
+	background: linear-gradient(to bottom, #000 0, #333 75%, #474747 100%);
+	box-shadow: 2px 2px 3px 1px #101010;
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		li {
+			display: block;
+			a {
+				display: block;
+				color: #fff;
+				text-transform: capitalize;
+				font-size: 12px;
+				font-family: Arial, Helvetica, sans-serif;
+				text-decoration: none;
+				padding: 5px 3px;
+				&:hover {
+					color: red;
+				}
+			}
+		}
+	}
+}
+.dropdown__menu-enter-from {
+	opacity: 0;
+}
+.dropdown__menu-enter-to {
+	opacity: 1;
+}
+.dropdown__menu-enter-active {
+	transition: all 0.5s ease-in;
+}
+.dropdown__menu-leave-from {
+	opacity: 1;
+}
+.dropdown__menu-leave-to {
+	opacity: 0;
+}
+.dropdown__menu-leave-active {
+	transition: all 0.5s ease-in;
 }
 .bg-color {
 	background: #333333;
@@ -134,6 +263,12 @@ export default defineComponent({
 }
 .dropdown__menu-leave-active {
 	transition: all 0.5s ease-in;
+}
+
+@media screen and (max-width: 920px) {
+	.navbar__top_menu {
+		display: none;
+	}
 }
 
 @media screen and (max-width: 1350px) {
