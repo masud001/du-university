@@ -171,11 +171,10 @@ export default defineComponent({
 	}
 }
 
-@media screen and (max-width: 1350px) {
+@media screen and (max-width: 1080px) {
 	.navbar_menu_wrapper {
 		opacity: 0;
 		display: none;
-		background-image: unset;
 	}
 }
 </style>

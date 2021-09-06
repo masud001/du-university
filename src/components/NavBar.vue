@@ -275,6 +275,11 @@ export default defineComponent({
 	.navbar__search_button {
 		margin-right: 25px;
 	}
+}
+@media screen and (max-width: 1080px) {
+	.navbar__search_button {
+		margin-right: 25px;
+	}
 	.navbar__menu_toggle_button {
 		display: block;
 	}
