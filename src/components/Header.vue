@@ -34,8 +34,8 @@ export default defineComponent({
 <style lang="scss" scoped>
 .bg-color {
 	background-color: #800000;
-	border-top: 1px solid #ff1919;
-	border-bottom: 1px solid #ff1919;
+	/* border-top: 1px solid #ff1919; */
+	/* border-bottom: 1px solid #ff1919; */
 }
 .header__du_left {
 	.du__logo {
