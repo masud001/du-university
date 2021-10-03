@@ -3,14 +3,11 @@
 		<footer class="index_footer">
 			<div class="footer_map">
 				<h3>View all</h3>
-
 				<p></p>
-
 				<div class="link">
 					<a href="">title there</a>
 				</div>
 			</div>
-
 			<footer id="footer">
 				<div>
 					<div class="copyright">

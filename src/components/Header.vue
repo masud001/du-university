@@ -1,5 +1,5 @@
 <template>
-	<div class="header__area bg-color text-white px-5">
+	<div class="header__area bg-color text-white px-md-5">
 		<div class="container-fluid d-flex  align-items-center justify-content-between">
 			<div class="header__du_left">
 				<a href="#">

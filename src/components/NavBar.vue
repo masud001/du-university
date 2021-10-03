@@ -1,6 +1,6 @@
 <template>
 	<div class="navbar__top">
-		<nav class="navbar navbar-light bg-color py-0 px-5">
+		<nav class="navbar navbar-light bg-color py-0 px-md-5">
 			<div class="container-fluid">
 				<a class="navbar-brand text-white text-uppercase" href="#">university of dhaka</a>
 				<div class="d-flex">
