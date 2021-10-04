@@ -9,8 +9,8 @@
 		<!-- page main body start -->
 		<div class="page_main_body py-3 px-md-5">
 			<div class="container-fluid">
-				<ProgramsCard badgeName="undergrad1" />
-				<ProgramsCard badgeName="undergrad2" />
+				<ProgramsCard cardName="new notice"> </ProgramsCard>
+				<ProgramsCard cardName="notice archive"> </ProgramsCard>
 			</div>
 		</div>
 		<!-- page main body end -->
@@ -32,7 +32,7 @@ import Footer from '@/components/Footer.vue';
 import FooterNavigation from '@/components/FooterNavigation.vue';
 import ProgramsCard from '@/components/ProgramsCard.vue';
 export default defineComponent({
-	name: 'ProgramsPage',
+	name: 'NoticesPage',
 	components: {
 		NavBar,
 		Header,
@@ -45,10 +45,10 @@ export default defineComponent({
 	},
 	data() {
 		return {
-			title: 'programs',
+			title: 'notice',
 			items: [
 				{ name: 'home', id: 1 },
-				{ name: 'programs', id: 2 },
+				{ name: 'notice', id: 2 },
 			],
 		};
 	},

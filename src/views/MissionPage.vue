@@ -7,10 +7,16 @@
 		<Breadcrumb :items="items" />
 
 		<!-- page main body start -->
-		<div class="page_main_body py-3 px-md-5">
+		<div class="page_main_body pb-3 pt-5 px-md-5">
 			<div class="container-fluid">
-				<ProgramsCard badgeName="undergrad1" />
-				<ProgramsCard badgeName="undergrad2" />
+				<div class="row">
+					<div class="col-md-2 d-none d-lg-block">
+						<SidebarMenu />
+					</div>
+					<div class="col-12 col-lg-10">
+						<AcademyContent :imgPos="imgPos" :imgUrl="imgUrl" />
+					</div>
+				</div>
 			</div>
 		</div>
 		<!-- page main body end -->
@@ -31,8 +37,10 @@ import Breadcrumb from '@/components/Breadcrumb.vue';
 import Footer from '@/components/Footer.vue';
 import FooterNavigation from '@/components/FooterNavigation.vue';
 import ProgramsCard from '@/components/ProgramsCard.vue';
+import SidebarMenu from '@/components/SidebarMenu.vue';
+import AcademyContent from '@/components/AcademyContent.vue';
 export default defineComponent({
-	name: 'ProgramsPage',
+	name: 'MissionPage',
 	components: {
 		NavBar,
 		Header,
@@ -42,14 +50,19 @@ export default defineComponent({
 		Footer,
 		FooterNavigation,
 		ProgramsCard,
+		SidebarMenu,
+		AcademyContent,
 	},
 	data() {
 		return {
-			title: 'programs',
+			title: 'mission and purpose',
 			items: [
 				{ name: 'home', id: 1 },
-				{ name: 'programs', id: 2 },
+				{ name: 'mission', id: 2 },
 			],
+
+			imgUrl: 'https://via.placeholder.com/1200x400',
+			imgPos: 'img-fluid',
 		};
 	},
 });

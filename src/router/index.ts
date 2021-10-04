@@ -1,7 +1,14 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
 import Home from '../views/Home.vue';
 import ProgramsPage from '../views/ProgramsPage.vue';
-import NoticePage from '../views/NoticePage.vue';
+import NoticesPage from '../views/NoticesPage.vue';
+import ChairpersonsNote from '../views/ChairpersonsNote.vue';
+import MissionPage from '../views/MissionPage.vue';
+import OverviewPage from '../views/OverviewPage.vue';
+import SingleNoticePage from '../views/SingleNoticePage.vue';
+import ResultPage from '../views/ResultPage.vue';
+import RoutinePage from '../views/RoutinePage.vue';
+import StaffPage from '../views/StaffPage.vue';
 const routes: Array<RouteRecordRaw> = [
 	{
 		path: '/',
@@ -9,14 +16,49 @@ const routes: Array<RouteRecordRaw> = [
 		component: Home,
 	},
 	{
-		path: '/programme-page',
+		path: '/programme',
 		name: 'ProgramsPage',
 		component: ProgramsPage,
 	},
 	{
-		path: '/notice-page',
-		name: 'NoticePage',
-		component: NoticePage,
+		path: '/notices',
+		name: 'NoticesPage',
+		component: NoticesPage,
+	},
+	{
+		path: '/academic',
+		name: 'ChairpersonsNote',
+		component: ChairpersonsNote,
+	},
+	{
+		path: '/mission',
+		name: 'MissionPage',
+		component: MissionPage,
+	},
+	{
+		path: '/overview',
+		name: 'OverviewPage',
+		component: OverviewPage,
+	},
+	{
+		path: '/notice',
+		name: 'SingleNoticePage',
+		component: SingleNoticePage,
+	},
+	{
+		path: '/result',
+		name: 'ResultPage',
+		component: ResultPage,
+	},
+	{
+		path: '/routine',
+		name: 'RoutinePage',
+		component: RoutinePage,
+	},
+	{
+		path: '/staff',
+		name: 'StaffPage',
+		component: StaffPage,
 	},
 	{
 		path: '/about',

@@ -6,12 +6,7 @@
 				<div
 					class=" py-4 card-header bg-transparent  d-flex justify-content-between align-items-center"
 				>
-					<p class="programs-title text-uppercase mb-0 fw-bold">
-						{{ cardName }}
-					</p>
-					<div class="clicks-dots">
-						<i class="fas fa-circle"></i>
-					</div>
+					<Badges :badgeName="badgeName" />
 				</div>
 				<!-- cadr body  -->
 				<div class=" card-body py-5 ">
@@ -34,13 +29,14 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+import Badges from './common/Badges.vue';
 import SingleProgram from './SingleProgram.vue';
 
 export default defineComponent({
-	components: { SingleProgram },
+	components: { SingleProgram, Badges },
 	name: 'ProgramsCard',
-	props: ['cardName'],
 	setup() {},
+	props: ['badgeName'],
 });
 </script>
 
