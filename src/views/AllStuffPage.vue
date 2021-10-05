@@ -16,16 +16,16 @@
 					<div class="col-12 col-lg-10">
 						<div class="all_staff__wrapper p-3 p-md-4">
 							<div class="row justify-content-between">
-								<div class="col-12 col-lg-6 mb-5">
+								<div class="col-12 col-lg-6 py-4">
 									<StuffCard />
 								</div>
-								<div class="col-12 col-lg-6 mb-5">
+								<div class="col-12 col-lg-6 py-4">
 									<StuffCard />
 								</div>
-								<div class="col-12 col-lg-6 mb-5">
+								<div class="col-12 col-lg-6 py-4">
 									<StuffCard />
 								</div>
-								<div class="col-12 col-lg-6 mb-5">
+								<div class="col-12 col-lg-6 py-4">
 									<StuffCard />
 								</div>
 							</div>
