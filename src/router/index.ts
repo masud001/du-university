@@ -8,7 +8,8 @@ import OverviewPage from '../views/OverviewPage.vue';
 import SingleNoticePage from '../views/SingleNoticePage.vue';
 import ResultPage from '../views/ResultPage.vue';
 import RoutinePage from '../views/RoutinePage.vue';
-import StaffPage from '../views/StaffPage.vue';
+import SingleStaffPage from '../views/SingleStaffPage.vue';
+import AllStuffPage from '../views/AllStuffPage.vue';
 const routes: Array<RouteRecordRaw> = [
 	{
 		path: '/',
@@ -57,8 +58,13 @@ const routes: Array<RouteRecordRaw> = [
 	},
 	{
 		path: '/staff',
-		name: 'StaffPage',
-		component: StaffPage,
+		name: 'SingleStaffPage',
+		component: SingleStaffPage,
+	},
+	{
+		path: '/all-staff',
+		name: 'AllStuffPage',
+		component: AllStuffPage,
 	},
 	{
 		path: '/about',

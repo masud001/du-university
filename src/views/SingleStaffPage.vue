@@ -65,7 +65,6 @@
 									</div>
 								</div>
 							</div>
-
 							<!-- navigation bar  -->
 							<div class="row pt-3 pt-md-5 pb-3">
 								<div class="col-12 text-center">
