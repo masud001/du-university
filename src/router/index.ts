@@ -11,6 +11,7 @@ import RoutinePage from '../views/RoutinePage.vue';
 import SingleStaffPage from '../views/SingleStaffPage.vue';
 import AllStuffPage from '../views/AllStuffPage.vue';
 import AllFacultyPage from '../views/AllFacultyPage.vue';
+import ProgramSinglePage from '../views/ProgramSinglePage.vue';
 const routes: Array<RouteRecordRaw> = [
 	{
 		path: '/',
@@ -71,6 +72,11 @@ const routes: Array<RouteRecordRaw> = [
 		path: '/all-faculty',
 		name: 'AllFacultyPage',
 		component: AllFacultyPage,
+	},
+	{
+		path: '/single-program',
+		name: 'ProgramSinglePage',
+		component: ProgramSinglePage,
 	},
 	{
 		path: '/about',
