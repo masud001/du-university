@@ -109,7 +109,6 @@ export default defineComponent({
 
 @media only screen and (min-width: 320px) {
 	.stuff_card__wrapper {
-		background-color: #fff;
 		padding: 10px;
 	}
 	.stuff_about {
@@ -128,15 +127,56 @@ export default defineComponent({
 	.stuff__image {
 		height: 180px;
 	}
+	.stuff_about {
+		.stuff_know__more__btn {
+			bottom: -29px;
+			button {
+				padding: 10px 18px;
+				font-size: 14px;
+			}
+		}
+	}
 }
 @media only screen and (min-width: 768px) {
 	.stuff__image {
 		height: 200px;
 	}
+	.stuff_about {
+		.stuff_know__more__btn {
+			bottom: -29px;
+			button {
+				padding: 10px 18px;
+				font-size: 14px;
+			}
+		}
+	}
 }
 @media only screen and (min-width: 992px) {
+	.stuff_card__wrapper {
+		padding: 25px;
+	}
+	.stuff_about {
+		.stuff_know__more__btn {
+			bottom: -40px;
+			button {
+				padding: 10px 12px;
+				font-size: 14px;
+			}
+		}
+	}
 	.stuff__image {
 		height: 150px;
+	}
+}
+@media only screen and (min-width: 1086px) {
+	.stuff_about {
+		.stuff_know__more__btn {
+			bottom: -40px;
+			button {
+				padding: 10px 15px;
+				font-size: 14px;
+			}
+		}
 	}
 }
 </style>
